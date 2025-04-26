@@ -9,9 +9,13 @@ function App() {
     "And a fifth one",
   ];
 
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
+
   return (
     <div>
-      <ListGroup items={items} heading="List" />
+      <ListGroup items={items} heading="List" onSelectItem={handleSelectItem} />
     </div>
   );
 }
